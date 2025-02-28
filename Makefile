@@ -1,10 +1,10 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=ipq50xx-uboot-webui-recovery
+PKG_NAME:=gl-b3000-uboot-scr
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL= https://github.com/TheRootED24/ipq50xx-uboot-webui-recovery
+PKG_SOURCE_URL= https://github.com/TheRootED24/gl-b3000-uboot-scr
 PKG_SOURCE_DATE:=2025-02-28
 
 PKG_SOURCE_VERSION:=7a3009b676d66168f9a8f438d558dc816858c850
@@ -16,15 +16,15 @@ PKG_LICENSE_FILES:=LICENSE
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/ipq50xx-uboot-webui-recovery
+define Package/gl-b3000-uboot-scr
 	SECTION:=utils
 	CATEGORY:=Utilities
 	SUBMENU:=Boot Loaders
 	TITLE:= ** SELECT <help> FOR PROPER INSTALLATION **
-	URL:=https://github.com/TheRootED24/gl-b3000-uboot-recovery.git
+	URL:=https://github.com/TheRootED24/gl-b3000-uboot-scr.git
 endef
 
-define Package/ipq50xx-uboot-webui-recovery/description
+define Package/gl-b3000-uboot-scr/description
   This package contains the uboot scr file needed to
   enable uboot webui recovery and firmware upgrades
   for OpenWrt Firmwares.
@@ -41,9 +41,9 @@ define Package/ipq50xx-uboot-webui-recovery/description
 endef
 
 define Build/InstallDev
-	$(INSTALL_DIR) $(1)/usr/include/ipq50xx-uboot-webui-recovery
+	$(INSTALL_DIR) $(1)/usr/include/gl-b3000-uboot-scr
 	$(CP) $(PKG_BUILD_DIR)/*.scr \
-	$(1)/usr/include/ipq50xx-uboot-webui-recovery/
+	$(1)/usr/include/gl-b3000-uboot-scr/
 endef
 
-$(eval $(call BuildPackage,ipq50xx-uboot-webui-recovery))
+$(eval $(call BuildPackage,gl-b3000-uboot-scr))
