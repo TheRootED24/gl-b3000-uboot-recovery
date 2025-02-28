@@ -4,7 +4,7 @@ PKG_NAME:=uboot-scr
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL= git@github.com:TheRootED24/uboot-scr.git
+PKG_SOURCE_URL= https://github.com/TheRootED24/uboot-scr.git
 PKG_SOURCE_DATE:=2025-02-24
 			
 PKG_SOURCE_VERSION:=
